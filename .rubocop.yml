@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - '.irbrc'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'db/**/*'
+    - 'Gemfile'
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+  NewCops: enable
+
+require: rubocop-rspec
