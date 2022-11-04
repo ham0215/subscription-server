@@ -4,6 +4,7 @@ AllCops:
     - '.irbrc'
     - 'config/**/*'
     - 'config.ru'
+    - 'cable/config.ru'
     - 'db/**/*'
     - 'Gemfile'
     - 'spec/**/*'
