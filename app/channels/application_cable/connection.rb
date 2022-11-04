@@ -12,7 +12,7 @@ module ApplicationCable
 
     def find_verified_user!
       # User.find_by(id: cookies.encrypted[:user_id]) || reject_unauthorized_connection
-      User.first
+      User.all.sample
     end
   end
 end
