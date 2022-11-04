@@ -12,6 +12,6 @@ class ChatChannel < ApplicationCable::Channel
 
   def chat(data)
     Rails.logger.debug("user: #{current_user.id}, message: #{data}")
-    ActionCable.server.broadcast('chat', { sender: current_user.name, body: "sent: #{current_user.id}" })
+    ActionCable.server.broadcast('chat', { sender: current_user.name, body: data['body'] })
   end
 end
