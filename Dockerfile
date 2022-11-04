@@ -29,5 +29,3 @@ RUN bundle update --bundler
 RUN bundle install
 
 COPY . .
-
-CMD ["rails", "server", "-b", "0.0.0.0"]

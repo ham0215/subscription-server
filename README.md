@@ -1,24 +1,9 @@
-# README
+# Subscription Server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## certificate for localhost
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ brew install mkcert
+$ mkcert -install
+$ mkcert localhost
+```

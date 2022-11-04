@@ -18,7 +18,7 @@ services:
     tty: true
     stdin_open: true
     build: .
-    command: bundle exec puma -p 28080 cable/config.ru # tail -f /dev/null
+    command: puma -C config/puma.rb # tail -f /dev/null # bundle exec puma -p 28080 cable/config.ru
     volumes:
       - .:/app
     environment:
@@ -26,7 +26,7 @@ services:
       EDITOR: vim
       BULLET: 1
     ports:
-      - "28080:28080"
+      - "3020:3020"
     depends_on:
       - db
       - redis
