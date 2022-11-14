@@ -18,7 +18,7 @@ services:
     tty: true
     stdin_open: true
     build: .
-    command: puma -C config/puma.rb # tail -f /dev/null # bundle exec puma -p 28080 cable/config.ru
+    command: puma -C config/puma.rb
     volumes:
       - .:/app
     environment:

@@ -22,6 +22,7 @@ class GraphqlChannel < ApplicationCable::Channel
       # in this channel or ApplicationCable::Channel
       # current_user: current_user,
       # Make sure the channel is in the context
+      current_user:,
       channel: self
     }
 
