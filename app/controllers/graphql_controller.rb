@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
@@ -12,17 +14,18 @@ class GraphqlController < ApplicationController
       # Query context goes here, for example:
       # current_user: current_user,
     }
-    result = AppSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+    result = AppSchema.execute(query, variables:, context:, operation_name:)
     render json: result
   rescue StandardError => e
     raise e unless Rails.env.development?
+
     handle_error_in_development(e)
   end
 
   private
 
   # Handle variables in form data, JSON body, or a blank value
-  def prepare_variables(variables_param)
+  def prepare_variables(variables_param) # rubocop:disable Metrics/MethodLength
     case variables_param
     when String
       if variables_param.present?
@@ -41,10 +44,10 @@ class GraphqlController < ApplicationController
     end
   end
 
-  def handle_error_in_development(e)
-    logger.error e.message
-    logger.error e.backtrace.join("\n")
+  def handle_error_in_development(err)
+    logger.error err.message
+    logger.error err.backtrace.join("\n")
 
-    render json: { errors: [{ message: e.message, backtrace: e.backtrace }], data: {} }, status: 500
+    render json: { errors: [{ message: err.message, backtrace: err.backtrace }], data: {} }, status: 500
   end
 end
