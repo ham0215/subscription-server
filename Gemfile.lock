@@ -83,7 +83,7 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     date (0.0.1)
-    debug (1.9.0)
+    debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     drb (2.1.1)
