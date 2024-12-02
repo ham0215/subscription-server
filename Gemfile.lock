@@ -95,7 +95,7 @@ GEM
     fiber-storage (0.1.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.4.4)
+    graphql (2.4.5)
       base64
       fiber-storage
     i18n (1.14.6)
