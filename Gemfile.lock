@@ -79,7 +79,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0)
     ast (2.4.3)
-    base64 (0.2.0)
+    base64 (0.3.0)
     benchmark (0.4.0)
     bigdecimal (1.4.4)
     builder (3.3.0)
@@ -95,7 +95,7 @@ GEM
     fiber-storage (0.1.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.5.11)
+    graphql (2.6.1)
       base64
       fiber-storage
       logger
